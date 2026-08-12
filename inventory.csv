@@ -1,0 +1,28 @@
+product_id,name,category,price,quantity,supplier
+1018,Projector,Electronics,10,0,VisionHub
+1011,External HDD,Storage,2323,2,DataSafe
+1020,Drone,Electronics,800,2,FlyHigh
+1020,Drone,Electronics,800,2,FlyHigh
+3233,mouse,Computer,90,4,abcd
+1232,hacker,Programmer,570,23,rehan
+1000,mose,Computer,190,79,ali
+1019,Scanner,Office Supplies,14,82,NetGear
+8504,mosuse,Computer,12,90,accd
+7897,Keyboard,Computer&parts,122,650,ABC Supplier
+1001,Mouse,Computer&parts,50,1200,TechWorld
+1015,Keyboard,Computer&parts,70,2500,KeyMasters
+1014,Power Bank,Accessories,55,3200,ChargeIt
+1008,Headphones,Audio,60,3500,SoundMax
+1010,HHD,Computer&parts,45,4200,CamTech
+1016,Microphone,Audio,33,5600,ABC Supplier
+1009,Speakers,Audio,35,7800,AudioWorld
+1005,Router,Networking,40,8500,NetGear
+1012,Programmer,Storage,700,13489,FastDrive
+1002,Monitor,Electronics,30,15000,DisplayHub
+1004,Printer,Office Supplies,20,18000,PrintPro
+1017,Smartwatch,Wearables,27,28000,TimeTech
+1007,Tablet,Electronics,18,45000,GadgetStore
+1013,Graphics Card,Computer&parts,12,65000,GPUHouse
+1006,Smartphone,Mobiles,25,72000,MobileMart
+1003,Laptop,Computers,15,94600,MegaTech
+1322,Laptop,computer,9000,80,Apple

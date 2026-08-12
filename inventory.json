@@ -1,0 +1,234 @@
+[
+    {
+        "product_id": 1018,
+        "name": "Projector",
+        "category": "Electronics",
+        "price": 10,
+        "quantity": 0,
+        "supplier": "VisionHub"
+    },
+    {
+        "product_id": 1020,
+        "name": "Drone",
+        "category": "Electronics",
+        "price": 800,
+        "quantity": 2,
+        "supplier": "FlyHigh"
+    },
+    {
+        "product_id": 1020,
+        "name": "Drone",
+        "category": "Electronics",
+        "price": 800,
+        "quantity": 2,
+        "supplier": "FlyHigh"
+    },
+    {
+        "product_id": 1011,
+        "name": "External HDD",
+        "category": "Storage",
+        "price": 2323,
+        "quantity": 2,
+        "supplier": "DataSafe"
+    },
+    {
+        "product_id": 1232,
+        "name": "hacker",
+        "category": "Programmer",
+        "price": 570,
+        "quantity": 23,
+        "supplier": "rehan"
+    },
+    {
+        "product_id": 1019,
+        "name": "Scanner",
+        "category": "Office Supplies",
+        "price": 14,
+        "quantity": 82,
+        "supplier": "NetGear"
+    },
+    {
+        "product_id": 8504,
+        "name": "mosuse",
+        "category": "Computer",
+        "price": 12,
+        "quantity": 90,
+        "supplier": "accd"
+    },
+    {
+        "product_id": 7897,
+        "name": "Keyboard",
+        "category": "Computer&parts",
+        "price": 122,
+        "quantity": 650,
+        "supplier": "ABC Supplier"
+    },
+    {
+        "product_id": 1001,
+        "name": "Mouse",
+        "category": "Computer&parts",
+        "price": 50,
+        "quantity": 1200,
+        "supplier": "TechWorld"
+    },
+    {
+        "product_id": 1015,
+        "name": "Keyboard",
+        "category": "Computer&parts",
+        "price": 70,
+        "quantity": 2500,
+        "supplier": "KeyMasters"
+    },
+    {
+        "product_id": 1014,
+        "name": "Power Bank",
+        "category": "Accessories",
+        "price": 55,
+        "quantity": 3200,
+        "supplier": "ChargeIt"
+    },
+    {
+        "product_id": 1008,
+        "name": "Headphones",
+        "category": "Audio",
+        "price": 60,
+        "quantity": 3500,
+        "supplier": "SoundMax"
+    },
+    {
+        "product_id": 1010,
+        "name": "HHD",
+        "category": "Computer&parts",
+        "price": 45,
+        "quantity": 4200,
+        "supplier": "CamTech"
+    },
+    {
+        "product_id": 1016,
+        "name": "Microphone",
+        "category": "Audio",
+        "price": 33,
+        "quantity": 5600,
+        "supplier": "ABC Supplier"
+    },
+    {
+        "product_id": 1009,
+        "name": "Speakers",
+        "category": "Audio",
+        "price": 35,
+        "quantity": 7800,
+        "supplier": "AudioWorld"
+    },
+    {
+        "product_id": 1005,
+        "name": "Router",
+        "category": "Networking",
+        "price": 40,
+        "quantity": 8500,
+        "supplier": "NetGear"
+    },
+    {
+        "product_id": 1012,
+        "name": "na,e",
+        "category": "Porn star",
+        "price": 300,
+        "quantity": 13489,
+        "supplier": "FastDrive"
+    },
+    {
+        "product_id": 1002,
+        "name": "Monitor",
+        "category": "Electronics",
+        "price": 30,
+        "quantity": 15000,
+        "supplier": "DisplayHub"
+    },
+    {
+        "product_id": 1004,
+        "name": "Printer",
+        "category": "Office Supplies",
+        "price": 20,
+        "quantity": 18000,
+        "supplier": "PrintPro"
+    },
+    {
+        "product_id": 1017,
+        "name": "Smartwatch",
+        "category": "Wearables",
+        "price": 27,
+        "quantity": 27999,
+        "supplier": "TimeTech"
+    },
+    {
+        "product_id": 1007,
+        "name": "Tablet",
+        "category": "Electronics",
+        "price": 18,
+        "quantity": 45000,
+        "supplier": "GadgetStore"
+    },
+    {
+        "product_id": 1013,
+        "name": "Graphics Card",
+        "category": "Computer&parts",
+        "price": 12,
+        "quantity": 65023,
+        "supplier": "GPUHouse"
+    },
+    {
+        "product_id": 1006,
+        "name": "Smartphone",
+        "category": "Mobiles",
+        "price": 25,
+        "quantity": 72000,
+        "supplier": "MobileMart"
+    },
+    {
+        "product_id": 1000,
+        "name": "mose",
+        "category": "Computer",
+        "price": 190,
+        "quantity": 79,
+        "supplier": "ali"
+    },
+    {
+        "product_id": 3233,
+        "name": "mouse",
+        "category": "Computer",
+        "price": 90,
+        "quantity": 4,
+        "supplier": "abcd"
+    },
+    {
+        "product_id": 1223,
+        "name": "Headphoes",
+        "category": "SSD",
+        "price": 34,
+        "quantity": 23,
+        "supplier": "ad"
+    },
+    {
+        "product_id": 2233,
+        "name": "shampoo",
+        "category": "medicare",
+        "price": 9999,
+        "quantity": 33,
+        "supplier": "aa"
+    },
+    {
+        "product_id": 2324,
+        "name": "zxsd",
+        "category": "computer",
+        "price": 23,
+        "quantity": 45,
+        "supplier": "rehna"
+    },
+    {
+        "product_id": 1234,
+        "name": "pepsi",
+        "category": "Market",
+        "price": 200,
+        "quantity": 4,
+        "supplier": "usmankhan"
+    }
+]
