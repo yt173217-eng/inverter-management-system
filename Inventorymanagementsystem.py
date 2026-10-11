@@ -22,6 +22,7 @@ class Product:
         print(f"Product Price = {self.price}")
         print(f"Product Quantity = {self.quantity}")
         print(f"Product Supplier = {self.supplier}")
+
     def to_dict(self):
         return {
             "product_id": self.product_id,
@@ -186,12 +187,14 @@ class Inventory:
                     print("Invalid input ! ID must exactly 4 digit")
                     continue
                 product_id = int(product_id)
+                
                 found = False
                 for p in self.products:
-                   if(product_id == p.product_id):
-                        print(f"Product with this ID {product_id} found it {p.name}")
+                    if(product_id == p.product_id):
+                        total = [[p.product_id,p.name]]
+                        i = ["Product","Name"]
+                        print(tabulate(total,headers=i,tablefmt='grid'))
                         print("========================")
-                        p.show_details()
                         found = True
                         break
                 if not found:
@@ -337,50 +340,83 @@ class Inventory:
                 print("Product not found")
                 return
             
-            print(f"Available Quantity = {product.quantity}")
+            table =  [[product.quantity]]
+            headers = ["Available Quantity"]
+            print(tabulate(table,headers=headers,tablefmt="grid"))
             added_quantity = int(input("How many items do you want to add? "))
 
             if (added_quantity <= 0):
                 print(f"❌ You cannot update with {added_quantity}. Please enter a positive number.")
                 return
-            print(f"Old Quantity: {product.quantity}")# old quantity with out update
-            print(f"Add Quantity: {added_quantity}")# new quantity
+            
+            # new quantity
             product.quantity += added_quantity
-            print(f"✅ New Quantity: {product.quantity}")
+            add = [[added_quantity,product.quantity]]# old quantity with out update
+            header = ["Add Quantity","Total quantity"]
+            print(tabulate(add , headers=header, tablefmt="grid"))
             self.save_to_json()
         except ValueError:
             print("❌ Invalid input! Please enter a valid integer")
 #==========================================================================                
     def sell_product(self):
-        while True:
-            product = self.valid_id()
-            if not product:
-                continue
             while True:
-                try:
-                    sell_prod = int(input("How many item you want to sell: "))
-                    if sell_prod <= 0:
-                        print(f"You cannot update eith {sell_prod}. Please enter a postive number")
-                        continue
-                    # it's check before subtracting Is sell quantity greater than available quantity?
-                    if (sell_prod > product.quantity):
-                        print("❌ Not enough stock available.")
-                        print(f"Enter quantity between 1 and {product.quantity} ")
-                        continue
+                
+                    
+                product = input("Enter Product ID or Q to quit: ")
+                if(product.lower() == "q".lower()):
+                    print("You Exit...")
+                    break
 
-                    print(F"✅ Old Quantity: {product.quantity}")
-                    print(f"✅ Sell Quantity: {sell_prod}")
+                    # if input empty it's continue
+                if(not product):
+                    print("You can not leave empyt list")
+                    continue
+
+
+                product = int(product)
+                found = False
+                for p in self.products:
+                    if(product == p.product_id):
+                        print("ID Found it...")
+                        found =True
+                if not found:
+                    print("ID not found invalid ID")
+                    continue
+
+                while True:
+                    try:        
+                        sell_prod = input("How many item you want to sell (q to quit): ")
+                        if(sell_prod == "q"):
+                            print("You exist.")
+                            break 
+                        else:
+                        
+                            sell_prod = int(sell_prod)
+                    except ValueError:
+                        print("INVALID INPUT")
+                    if sell_prod <= 0:
+                        print(f"You cannot update with {sell_prod}. Please enter a postive number")
+                     # it's check before subtracting Is sell quantity greater than available quantity?
                     
-                    product.quantity -= sell_prod
-                    sell_price = sell_prod * product.price
+                    if (sell_prod > p.quantity):
+                        print("❌ Not enough stock available.")
+                        print(f"Enter quantity between 1 and {p.quantity}:  ")
+                        
                     
-                    print(f"✅ New Quantity: {product.quantity}")
+                    
+                    table = [[p.price,p.quantity]]
+                    hader = ["Price","Old_Quantity"]
+                    print(tabulate(table,headers=hader,tablefmt='pretty'))
+
+                    p.quantity -= sell_prod
+                    sell_price = sell_prod * p.price
+                    
+                    print(f"✅ New Quantity: {p.quantity}")
                     print(f"✅ Product sell successfully.Total price. {sell_price}")
                     self.save_to_json()
-                    break
-                except ValueError:
-                    print("Invalid input ! Enter a valid postive number")
-            break
+            
+            
+            
 #==========================================================================                    
     def low_stock_alert(self):
         """Prints a low stock alert for products with quantity < 5."""
@@ -644,7 +680,64 @@ class Inventory:
                 
 #=====================================================\   
  
-
-#=====================================================\
 inventory = Inventory()
 inventory.menu()
+
+#=====================================================\
+
+'''class Supplier:
+    def __init__(self,id,name,phone_number,company):
+        self.id = id
+        self.name = name
+        self.phone = phone_number
+        self.company = company
+
+
+    def showdetails(self):
+        print("Supplier_ID =",self.id)
+        print("Supplier_Name =",self.name)
+        print("Supplier_Number =",self.phone)
+        print("Supplier_Company =",self.company)
+        
+
+class Suppliers:
+    def __init__(self):
+        self.suppliers = []
+
+    def add_product(self,supplier):
+        self.suppliers.append(supplier)
+
+    def supplier_id(self):
+        while True:
+            id = input("Enter Supplier ID: ").strip()
+            if not(id):
+                print("You can not leave empty input")
+                continue
+            if (not id.isdigit()):
+                print(F"{id} wrong input enter numeric number")
+                continue
+            if(len(id) != 4):
+                print("Please Enter 4 Digit")
+                continue
+            id = int(id)
+
+            found = False
+            for s in self.suppliers:
+                if(id == s.id):
+                    print("ID not available..")
+                    found = True
+                    continue
+            if not found:
+                    print("ID available..")
+                    break
+                    
+            
+
+            
+
+s = Supplier(1294,"Rehan","03187789323","ABC")
+s = Supplier(1238,"Rehan","03187789323","ABC")
+s = Supplier(1236,"Rehan","03187789323","ABC")
+s = Supplier(1237,"Rehan","03187789323","ABC")
+
+s.supplier_id()'''
