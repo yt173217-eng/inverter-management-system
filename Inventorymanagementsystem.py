@@ -385,34 +385,38 @@ class Inventory:
 
                 while True:
                     try:        
-                        sell_prod = input("How many item you want to sell (q to quit): ")
-                        if(sell_prod == "q"):
+                        sell_product = input("How many item you want to sell (q to quit): ")
+                        if(sell_product == "q"):
                             print("You exist.")
                             break 
                         else:
                         
-                            sell_prod = int(sell_prod)
+                            sell_product = int(sell_product)
                     except ValueError:
                         print("INVALID INPUT")
-                    if sell_prod <= 0:
-                        print(f"You cannot update with {sell_prod}. Please enter a postive number")
+                        continue
+
+                    if sell_product <= 0:
+                        print(f"You cannot update with {sell_product}. Please enter a postive number")
+                        continue
                      # it's check before subtracting Is sell quantity greater than available quantity?
                     
-                    if (sell_prod > p.quantity):
+                    if (sell_product > p.quantity):
                         print("❌ Not enough stock available.")
                         print(f"Enter quantity between 1 and {p.quantity}:  ")
-                        
+                    # save old quantity
+                    old_quantity = p.quantity 
+                    p.quantity -= sell_product
+                    sell_price = sell_product * p.price
                     
-                    
-                    table = [[p.price,p.quantity]]
-                    hader = ["Price","Old_Quantity"]
-                    print(tabulate(table,headers=hader,tablefmt='pretty'))
+                    table = [[p.price,old_quantity,p.quantity]]
+                    header = ["Price","Old_Quantity","New_Quantity"]
+                    print(tabulate(table,headers=header,tablefmt='pretty'))
 
-                    p.quantity -= sell_prod
-                    sell_price = sell_prod * p.price
                     
-                    print(f"✅ New Quantity: {p.quantity}")
-                    print(f"✅ Product sell successfully.Total price. {sell_price}")
+                    
+                    
+                    print(f"✅ Product sold successfully. Total price. {sell_price}")
                     self.save_to_json()
             
             
